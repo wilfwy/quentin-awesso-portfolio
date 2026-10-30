@@ -47,12 +47,6 @@ const bonus = [
   ["Groupe VIP WhatsApp à vie", "Inestimable"],
 ];
 
-const profils = [
-  { img: "https://assets.cdn.chariow.com/assets/store_y44mm1mfgmzf/4NoOqBbV6W2cRjNHNfOqo8Oeon8NZ9ACuK78Zoqi.jpg", t: "Futurs freelances", s: "Liberté financière" },
-  { img: "https://assets.cdn.chariow.com/assets/store_y44mm1mfgmzf/ibWynUTIJbPbaH175eBw3DJ2Tih5A3RnU1oK3FTT.jpg", t: "Étudiants & diplômés", s: "Sans emploi" },
-  { img: "https://assets.cdn.chariow.com/assets/store_y44mm1mfgmzf/MGciJgODmAjCLjNMoN8IDZGdRuw4uKOJiSl5qRmR.jpg", t: "Salariés", s: "Revenu complémentaire" },
-];
-
 const preuves = [
   ["01-cathy", "101 000 FCFA", "Cathy", "141 clients"],
   ["02-esther", "79 000 FCFA", "Esther Ahoefa", "51 clients"],
