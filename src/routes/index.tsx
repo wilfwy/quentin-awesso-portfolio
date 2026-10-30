@@ -11,9 +11,9 @@ const CHECKOUT = "https://chariow.shop/formation-marketing-digital/checkout?chw_
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Quentin AWESSO — Expert en marketing digital" },
-      { name: "description", content: "Formation marketing digital : 5 modules, 4 bonus, accompagnement et groupe VIP WhatsApp. Lance ton business digital en 2h." },
-      { property: "og:title", content: "Quentin AWESSO — Expert en marketing digital" },
+      { title: "Quentin AWESSO — Expert en marketing e-commerce & digital" },
+      { name: "description", content: "Expert en marketing e-commerce et marketing digital. Formation : 5 modules, 4 bonus, accompagnement et groupe VIP WhatsApp. Lance ton business digital en 2h." },
+      { property: "og:title", content: "Quentin AWESSO — Expert en marketing e-commerce & digital" },
       { property: "og:description", content: "La structure bat la motivation. Formation complète pour lancer ton produit digital." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -124,7 +124,7 @@ function Index() {
         </div>
         <div className="text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-3 py-1 text-xs font-bold text-accent"><span className="h-1.5 w-1.5 rounded-full bg-accent" />Formation disponible maintenant</span>
-          <div className="mt-3"><span className="inline-block rounded-full border border-primary/40 px-3 py-1.5 eyebrow">Expert en marketing digital · Stratège</span></div>
+          <div className="mt-3"><span className="inline-block rounded-full border border-primary/40 px-3 py-1.5 eyebrow">Expert en marketing e-commerce & marketing digital</span></div>
           <h1 className="mt-6 text-5xl leading-[1.05] md:text-6xl">La structure bat la motivation.</h1>
           <p className="mx-auto mt-6 max-w-lg text-muted-foreground leading-relaxed">Parti de rien — un téléphone et une connexion — j’ai construit un business digital sans stock ni local. Aujourd’hui je transmets la méthode qui a fonctionné.</p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
@@ -301,7 +301,7 @@ function Index() {
         </div>
       </Section>
 
-      <footer className="border-t border-border py-8 text-center text-xs text-muted-foreground">© {new Date().getFullYear()} Quentin AWESSO · Marketing digital</footer>
+      <footer className="border-t border-border py-8 text-center text-xs text-muted-foreground">© {new Date().getFullYear()} Quentin AWESSO · Expert en marketing e-commerce & marketing digital</footer>
     </div>
   );
 }
