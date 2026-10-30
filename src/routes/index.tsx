@@ -25,11 +25,11 @@ export const Route = createFileRoute("/")({
 });
 
 const stats = [
-  { v: "2000$", l: "Générés en vente digitale" },
-  { v: "05", l: "Modules de formation" },
-  { v: "02H", l: "De contenu" },
+  { v: "2000$", l: "Générés personnellement en vente digitale" },
+  { v: "500K", l: "Mon prochain objectif" },
   { v: "126", l: "Avis d'élèves" },
   { v: "98%", l: "De satisfaction" },
+  { v: "05", l: "Modules transmis" },
 ];
 
 const modules = [
@@ -120,16 +120,16 @@ function Index() {
       {/* HERO */}
       <Section className="grid items-center gap-12 md:grid-cols-2 !pt-12">
         <div className="mx-auto w-full max-w-md overflow-hidden rounded-[2rem] border border-gold/50 shadow-glow">
-          <img src={HERO} alt="Portrait de Quentin AWESSO" className="aspect-[4/5] w-full object-cover" />
+          <img src={HERO} alt="Photo de Quentin AWESSO" className="aspect-[4/5] w-full object-cover" />
         </div>
         <div className="text-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-3 py-1 text-xs font-bold text-accent"><span className="h-1.5 w-1.5 rounded-full bg-accent" />Formation disponible maintenant</span>
+          <span className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-3 py-1 text-xs font-bold text-accent"><span className="h-1.5 w-1.5 rounded-full bg-accent" />Disponible pour de nouveaux élèves</span>
           <div className="mt-3"><span className="inline-block rounded-full border border-primary/40 px-3 py-1.5 eyebrow">Expert en marketing e-commerce & marketing digital</span></div>
           <h1 className="mt-6 text-5xl leading-[1.05] md:text-6xl">La structure bat la motivation.</h1>
-          <p className="mx-auto mt-6 max-w-lg text-muted-foreground leading-relaxed">Parti de rien — un téléphone et une connexion — j’ai construit un business digital sans stock ni local. Aujourd’hui je transmets la méthode qui a fonctionné.</p>
+          <p className="mx-auto mt-6 max-w-lg text-muted-foreground leading-relaxed">Je suis parti de rien : fauché, avec un téléphone et une connexion. J’ai appris la vente digitale, puis le tunnel de vente, et aujourd’hui je transmets ce qui a fonctionné pour moi.</p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <a href={WA} target="_blank" rel="noreferrer" className={btnPrimary}>Écrire sur WhatsApp</a>
-            <a href="#offres" className={btnGhost}>Voir la formation</a>
+            <a href="#offres" className={btnGhost}>Voir les offres</a>
           </div>
           <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3">
             {stats.map((s) => (
@@ -145,13 +145,13 @@ function Index() {
 
       {/* OFFRES / MODULES */}
       <Section id="offres">
-        <p className="eyebrow text-center">Comprendre · Construire · Vendre</p>
-        <h2 className="mx-auto mt-4 max-w-2xl text-center text-4xl md:text-5xl">Cinq modules pour lancer ton business digital.</h2>
-        <p className="mx-auto mt-4 max-w-xl text-center text-muted-foreground">Une méthode claire, sans jargon, pensée pour passer à l’action dès aujourd’hui.</p>
+        <p className="eyebrow text-center">Apprendre · Appliquer · Vendre</p>
+        <h2 className="mx-auto mt-4 max-w-2xl text-center text-4xl md:text-5xl">Choisis le prochain chapitre de ton business.</h2>
+        <p className="mx-auto mt-4 max-w-xl text-center text-muted-foreground">Une méthode claire, sans jargon, pour passer à l’action dès aujourd’hui.</p>
         <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {modules.map((m, i) => (
             <article key={m.n} className="card-glass relative flex flex-col p-6">
-              {i === 3 && <span className="absolute right-5 top-5 rounded-full bg-brand px-3 py-1 text-xs font-bold text-primary-foreground">Populaire</span>}
+              {i === 0 && <span className="absolute right-5 top-5 rounded-full bg-brand px-3 py-1 text-xs font-bold text-primary-foreground">Populaire</span>}
               <p className="eyebrow">{m.n} / {m.phase}</p>
               <h3 className="mt-3 text-2xl">{m.t}</h3>
               <p className="mt-2 text-sm text-muted-foreground">{m.d}</p>
@@ -162,27 +162,23 @@ function Index() {
         </div>
       </Section>
 
-      {/* ECOSYSTEME : bonus + profils */}
+      {/* ECOSYSTEME : 2 niveaux */}
       <Section>
         <p className="eyebrow">L’écosystème Quentin</p>
-        <h3 className="mt-3 text-4xl">Quatre bonus <em className="text-primary">exclusifs.</em></h3>
-        <div className="mt-8 grid gap-4 sm:grid-cols-2">
-          {bonus.map(([t, v], i) => (
-            <div key={t} className="card-glass flex items-center justify-between gap-4 p-5">
-              <div><span className="font-serif text-primary">0{i + 1}</span> <span className="ml-2 font-semibold">{t}</span></div>
-              <span className="shrink-0 text-sm font-bold text-gold">{v}</span>
-            </div>
-          ))}
-        </div>
-        <p className="mt-4 text-sm text-muted-foreground">Valeur cumulée des bonus : <b className="text-foreground">+50 000 FCFA</b> — inclus aujourd’hui.</p>
-
-        <h3 className="mt-20 text-4xl">Pour qui ? <em className="text-primary">Trois profils.</em></h3>
-        <div className="mt-8 grid gap-5 sm:grid-cols-3">
-          {profils.map((p) => (
-            <div key={p.t} className="card-glass overflow-hidden">
-              <img src={p.img} alt={p.t} className="aspect-[4/3] w-full object-cover" loading="lazy" />
-              <div className="p-5"><h4 className="text-xl">{p.t}</h4><p className="text-sm text-muted-foreground">{p.s}</p></div>
-            </div>
+        <h3 className="mt-3 text-4xl">Choisis ton niveau <em className="text-primary">d’engagement.</em></h3>
+        <p className="mt-4 max-w-xl text-muted-foreground">Une porte d’entrée pour apprendre, puis un accompagnement plus proche quand tu es prêt à accélérer.</p>
+        <div className="mt-8 grid gap-5 md:grid-cols-2">
+          {[
+            { n: "01", k: "Accompagnement personnel", t: "Avancer avec moi, étape par étape", d: "Un suivi direct pour clarifier ton idée, créer ton produit et lancer tes premières ventes.", pts: ["Accompagnement personnel", "Guide des 5 erreurs à éviter", "Check-list de 5 prompts IA"], cta: "Écrire sur WhatsApp →", h: WA },
+            { n: "02", k: "Accès à vie", t: "Le groupe VIP WhatsApp", d: "Des conseils, des ressources et des échanges pour ne jamais avancer seul.", pts: ["Conseils utiles", "Ressources et opportunités", "Suivi & orientation"], cta: "Rejoindre la formation →", h: CHECKOUT },
+          ].map((e) => (
+            <article key={e.n} className="card-glass flex flex-col p-6">
+              <p className="eyebrow"><span className="font-serif text-primary">{e.n}</span> {e.k}</p>
+              <h4 className="mt-3 text-2xl">{e.t}</h4>
+              <p className="mt-2 text-sm text-muted-foreground">{e.d}</p>
+              <ul className="mt-4 space-y-2 text-sm">{e.pts.map((p) => <li key={p} className="flex gap-2"><span className="text-accent">✓</span>{p}</li>)}</ul>
+              <a href={e.h} target="_blank" rel="noreferrer" className="mt-auto pt-6 text-sm font-bold text-primary">{e.cta}</a>
+            </article>
           ))}
         </div>
       </Section>
